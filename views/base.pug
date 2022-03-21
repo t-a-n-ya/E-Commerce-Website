@@ -1,0 +1,42 @@
+doctype html 
+html 
+    head 
+        title Tanya
+    link(href='../css/bootstrap.min.css', rel='stylesheet')  
+    block style
+            style
+                include ../static/stylee.css 
+    body 
+        block content
+            header
+                div.logo Lifetsyle Store
+                nav.navbar
+                    ul 
+                        li  #[a(href="/l") Login]
+                        li  #[a(href="/s") Sign Up]
+                        li  #[a(href="/c") Contact Us]
+                div.nav_right
+                    input(type="text" id="search_box" name="search" placeholder="Search for brands, products and more")
+                    a.btn(href='#', type='button') search
+                    a(href="#")
+                        img(src="./static/9.png", alt="user" width="30px" height="30px")
+                    a(href="#")
+                        img(src="./static/7.png", alt="user" width="30px" height="30px")
+        block container
+        block footer         
+            footer 
+                .footer-container
+                    ul
+                        li.footer-ul  #[a(href="/") information]
+                        li  #[a(href="/") about us]
+                        li  #[a(href="/c") Contact us]
+                    ul
+                        li.footer-ul  #[a(href="/") my account]
+                        li  #[a(href="/l") Login]
+                        li  #[a(href="/s") signup]
+                    ul
+                        li.footer-ul  #[a(href="/") Contact us]
+                        li  #[a(href="/") contact:0000000000]
+        block scripts
+            script(src='../jq/jquery.js', rel='text/javascript')
+            script(src='../js/bootstrap.js', rel='text/javascript')

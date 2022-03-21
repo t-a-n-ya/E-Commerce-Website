@@ -1,0 +1,14 @@
+extends base.pug
+block style
+    style
+        include ../static/stylee.css
+        include ../static/login.css
+block container
+    .container
+        form.myloginForm(action='/l', method='post')
+            p.login LOGIN
+            p.logintext Login to make purchase
+            input.myInput(type="text" name="email" placeholder="Enter your email..")
+            input.myInput(type="password" name="password" placeholder="Enter your password..")
+            button.btn1(value="submit")
+                |   Submit   

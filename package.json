@@ -1,0 +1,23 @@
+{
+  "name": "tanya",
+  "version": "1.0.0",
+  "description": "this is my name",
+  "main": "tanya1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "awesome"
+  ],
+  "author": "tanya",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.1.3",
+    "express": "^4.17.1",
+    "jquery": "^3.6.0",
+    "pug": "^3.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}

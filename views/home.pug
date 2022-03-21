@@ -1,0 +1,64 @@
+extends base.pug
+
+block style
+  style
+    include ../static/stylee.css 
+block container  
+  section
+    .hero-section
+      .hero-section-text
+        h1 We Sell Lifestyle
+        p Flat 40%  Off Premium Brands
+        a.btnn(href='#', type='button')  Shop Now
+
+  section
+    .products 
+      h2.product-category New Arrivals 
+      .product-container
+        .product-cards
+          .product-image 
+            span.discount 50% Off
+            img.image(src="./static/10.jpg", alt="")
+            button.btn-card add to wishlist
+          .product-info
+            h2.brand Brand 
+            p.description detail of product
+            span.price $20
+            span.actual-price $20
+        .product-cards
+          .product-image 
+            span.discount 50% Off
+            img.image(src="./static/11.jpeg", alt="")
+            button.btn-card add to wishlist
+          .product-info
+            h2.brand Brand 
+            p.description detail of product
+            span.price $20
+            span.actual-price $20
+        .product-cards
+          .product-image 
+            span.discount 50% Off
+            img.image(src="./static/12.jpg", alt="")
+            button.btn-card add to wishlist
+          .product-info
+            h2.brand Brand 
+            p.description detail of product
+            span.price $20
+            span.actual-price $20
+        .product-cards
+          .product-image 
+            span.discount 50% Off
+            img.image(src="./static/15.jpg", alt="")
+            button.btn-card add to wishlist
+          .product-info
+            h2.brand Brand 
+            p.description detail of product
+            span.price $20
+            span.actual-price $20            
+
+
+
+
+block scripts
+  script(src='../jq/jquery.js', rel='text/javascript')
+  script(src='../js/bootstrap.js', rel='text/javascript')

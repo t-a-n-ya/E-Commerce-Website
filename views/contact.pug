@@ -1,0 +1,18 @@
+extends base.pug
+
+block scripts
+    script(src='/ststic/index.js')
+block style 
+    style
+        include ../static/stylee.css
+        include ../static/contact.css
+block container
+    .container
+        form.mycontactForm(action='/c', method='post')
+            h5 CONTACT US
+            input.mycontactInput(type="text" name="name" placeholder="Enter your name..")
+            input.mycontactInput(type="text" name="email" placeholder="Enter your email no..")
+            textarea.text(name="message" placeholder="Enter your Message Here..." cols="30", rows="5")
+            button.btn1(value="submit")
+                |   Submit      
+        
