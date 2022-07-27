@@ -8,10 +8,12 @@ html
                 include ../static/stylee.css 
     body 
         block content
-            header
+            header#header 
                 div.logo Lifetsyle Store
                 nav.navbar
-                    ul 
+                    ul  
+                        li  #[a(href="/") Home]
+                        li  #[a(href="/l") Shop]
                         li  #[a(href="/l") Login]
                         li  #[a(href="/s") Sign Up]
                         li  #[a(href="/c") Contact Us]
