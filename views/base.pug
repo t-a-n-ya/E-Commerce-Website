@@ -5,7 +5,7 @@ html
     link(href='../css/bootstrap.min.css', rel='stylesheet')  
     block style
             style
-                include ../static/stylee.css 
+                include ../static/css/stylee.css 
     body 
         block content
             header#header 
@@ -13,17 +13,17 @@ html
                 nav.navbar
                     ul  
                         li  #[a(href="/") Home]
-                        li  #[a(href="/l") Shop]
-                        li  #[a(href="/l") Login]
-                        li  #[a(href="/s") Sign Up]
-                        li  #[a(href="/c") Contact Us]
+                        li  #[a(href="/shop") Shop]
+                        li  #[a(href="/login") Login]
+                        li  #[a(href="/signup") Sign Up]
+                        li  #[a(href="/contact") Contact Us]
                 div.nav_right
                     input(type="text" id="search_box" name="search" placeholder="Search for brands, products and more")
                     a.btn(href='#', type='button') search
                     a(href="#")
-                        img(src="./static/9.png", alt="user" width="30px" height="30px")
+                        img(src="./static/images/9.png", alt="user" width="30px" height="30px")
                     a(href="#")
-                        img(src="./static/7.png", alt="user" width="30px" height="30px")
+                        img(src="./static/images/7.png", alt="user" width="30px" height="30px")
         block container
         block footer         
             footer 
@@ -31,13 +31,13 @@ html
                     ul
                         li.footer-ul  #[a(href="/") information]
                         li  #[a(href="/") about us]
-                        li  #[a(href="/c") Contact us]
+                        li  #[a(href="/contact") Contact us]
                     ul
                         li.footer-ul  #[a(href="/") my account]
-                        li  #[a(href="/l") Login]
-                        li  #[a(href="/s") signup]
+                        li  #[a(href="/login") Login]
+                        li  #[a(href="/signup") signup]
                     ul
-                        li.footer-ul  #[a(href="/") Contact us]
+                        li.footer-ul  #[a(href="/contact") Contact us]
                         li  #[a(href="/") contact:0000000000]
         block scripts
             script(src='../jq/jquery.js', rel='text/javascript')

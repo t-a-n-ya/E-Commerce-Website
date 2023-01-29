@@ -4,7 +4,8 @@ const app = express();
 const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost:27017/E-commerce');
 const Contact = require('./mng')
-const port = 3000;
+const Signup = require('./mng')
+const port = 3001;
 
 //static files
 app.use('/css', express.static(path.join(__dirname, "./node_modules/bootstrap/dist/css")));
@@ -12,35 +13,44 @@ app.use('/js', express.static(path.join(__dirname, "./node_modules/bootstrap/dis
 app.use('/jq', express.static(path.join(__dirname, "./node_modules/jquery/dist")));
 app.use('/static', express.static('static'));
 
-//console.log(path.join(__dirname, "./static/1.jpg"))
-app.use(express.urlencoded({extended:false}))  //to extrct dt from website
+//to extrct dt from website
+app.use(express.urlencoded({extended:false}))          
 
 //set the template engine  as pug
-app.set('view engine', 'pug')
+app.set('view engine', 'pug')      
 
-//set views directory
-app.set('/views', path.join(__dirname , 'views'))
+  //set views directory                    
+app.set('/views', path.join(__dirname , 'views'))    
 
 //endpoints
-/* app.get('/', (req,res)=>{
-       res.status(200).render('base.pug');
-}); */
 app.get('/', (req,res)=>{
-    res.status(200).render('home.pug');
+    res.status(200).render('home');
 });
-app.get('/l', (req,res)=>{
-    res.status(200).render('login.pug');
+app.get('/login', (req,res)=>{
+    res.status(200).render('login');
 });
-app.get('/s', (req,res)=>{
+app.get('/signup', (req,res)=>{
     res.status(200).render('signup.pug');
 });
-app.get('/c', (req,res)=>{
+app.post('/signup', (req,res) =>{
+    var signupInfo = req.body;
+
+    if(!signupInfo.name || !signupInfo.phone || !signupInfo.email || !signupInfo.password){
+        res.send("please enter all the details correctly")
+    }else{
+     var signupData = new Signup(req.body);}
+    signupData.save().then(() => {
+    res.send("This item has been saved to the database")
+    }).catch(() => {
+        res.status(400).send("item was not saved to the databse")
+    })
+})
+app.get('/contact', (req,res)=>{
     res.status(200).render('contact.pug');
 });
-app.post('/c', (req, res)=>{
+app.post('/contact', (req, res)=>{
     var myData = new Contact(req.body);
     myData.save().then(()=>{
-        console.log(req.body)
     res.send("This item has been saved to the database")
     }).catch(()=>{
     res.status(400).send("item was not saved to the databse")

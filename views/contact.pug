@@ -4,11 +4,11 @@ block scripts
     script(src='/ststic/index.js')
 block style 
     style
-        include ../static/stylee.css
-        include ../static/contact.css
+        include ../static/css/stylee.css
+        include ../static/css/contact.css
 block container
     .container
-        form.mycontactForm(action='/c', method='post')
+        form.mycontactForm(action='/contact', method='post')
             h5 CONTACT US
             input.mycontactInput(type="text" name="name" placeholder="Enter your name..")
             input.mycontactInput(type="text" name="email" placeholder="Enter your email no..")
